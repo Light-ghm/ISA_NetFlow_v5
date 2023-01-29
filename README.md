@@ -4,6 +4,12 @@
 
 **Hodnotenie:** 15/20b
 
+**Spustenie:** 
+
+- Preloženie programu sa vykoná príkazom `make`.
+
+- **Spustenie programu:** ```./flow [-f <file>] [-c <netflow collector>[:<port>]] [-a <active timer>][-i <inactive timer>] [-m <count>]```
+
 **Detailný popis:** manual.pdf
 
 **Krátky popis programu:** 
