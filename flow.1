@@ -1,0 +1,39 @@
+.TH FLOW 1
+.SH NAME
+flow \- create and export flows from .pcap file
+.SH SYNOPSIS
+.B flow
+[\fB\-f\fR \fIFILE\fR]
+[\fB\-c\fR \fINETFLOW_COLLECTOR[:PORT]\fR]
+[\fB\-a\fR \fIACTIVE_TIMER\fR]
+[\fB\-i\fR \fIINACTIVE_TIMER\fR]
+[\fB\-m\fR \fICOUNT\fR]
+.SH DESCRIPTION
+.B flow
+create flows from packets in .pcap file, packets belong to flow which their src ip, dst ip, src port, dst port and protocol corresponds to, flows are then sent to collector. 
+.SH OPTIONS
+.TP
+.BR \-f =\fIFILE\fI
+Name of file to analyze.
+
+Default is STDIN.
+.TP
+.BR \-c =\fICOLLECTOR[:PORT]\fI
+IP address or hostname of NetFlow collector.
+
+Default is 127.0.0.1:2055.
+.TP
+.BR \-a =\fIACTIVE_TIMER\fI
+Interval in seconds, after which active records get exported to collector.
+
+Default is 60 seconds.
+.TP
+.BR \-i =\fIINACTIVE_TIMER\fI
+Interval in seconds, after which inactive records get exported to collector.
+
+Default is 10 seconds.
+.TP
+.BR \-m =\fICOUNT\fI
+Size of flow-cache. After max. size is reached, oldest record gets exported from cache to collector.
+
+Default is 1024.
